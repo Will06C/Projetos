@@ -1,0 +1,25 @@
+
+         TEMPMAIL 
+
+CDwindow-944C1DC3C791461A1F241EC2F355FD08
+
+
+         CASA E VIDEO
+
+CDwindow-A518D6FB8318F14D040885E670C4AC20
+
+//span[contains(text(), "Texto")]
+//span[contains(@id, "ID ")]
+
+cmd_ctrl = Keys.COMMAND if sys.platform == 'darwin' else Keys.CONTROL
+
+ActionChains(driver)\
+    .send_keys("Selenium!")\
+    .send_keys(Keys.ARROW_LEFT)\
+    .key_down(Keys.SHIFT)\
+    .send_keys(Keys.ARROW_UP)\
+    .key_up(Keys.SHIFT)\
+    .key_down(cmd_ctrl)\
+    .send_keys("xvv")\
+    .key_up(cmd_ctrl)\
+    .perform()
