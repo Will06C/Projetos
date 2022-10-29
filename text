@@ -14,3 +14,27 @@
 #     .send_keys("xvv")\
 #     .key_up(cmd_ctrl)\
 #     .perform()
+#git config --global user.name nome_de_usuario
+# git config --global user.email email@exemplo.br
+
+# git init
+
+# git remote add origin https://github.com/user/repo.git
+
+# git add *
+
+# git commit -m 'mensagem para identificar o commit'
+
+# git push -u origin master
+# git config --global user.name nome_de_usuario
+# git config --global user.email email@exemplo.br
+
+# git init
+
+# git remote add origin url_do_seu_repositorio
+
+# git add *
+
+# git commit -m 'mensagem para identificar o commit'
+
+# git push -u origin master
