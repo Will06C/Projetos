@@ -3,9 +3,11 @@ import names
 import re
 import random as r
 
+
 def name():
     name = [("Seu nome Aleatório: " + names.get_full_name(gender = "male" "female"))]
     return (r.choice(name))
+
 
 def password():
     lower = "abcdefghijklmnopqrstuvwxyz"
@@ -17,6 +19,7 @@ def password():
     passwordd = "".join(r.sample(string,length))
     return("Sua nova Senha: " + passwordd)
 
+
 def email():
     lower = "abcdefghijklmnopqrstuvwxyz"
     num = "0123456789"
@@ -25,6 +28,7 @@ def email():
     length = 15
     Email = "".join(r.sample(string,length)) 
     return ("Seu novo EMAIL: "+ Email + mail)
+
 
 def numero():
     ddd = "61" ,"62" ,"64" ,"65", "66", "67", "68","96", "82", "97", "91", "93", "94", "69", "95", "63", "82", "71", "73", "74", "75", "77", "85", "88", "98", "99", "83", "81", "87", "86", "89", "84", "79", "11", "12", "13", "14", "15", "16", "17", "18", "19", "21", "22", "24", "27", "28", "31", "32", "33", "34", "35", "37", "38", "41", "42", "43", "44", "45", "46", "51", "53", "54", "55"
