@@ -14,6 +14,7 @@
 #     .send_keys("xvv")\
 #     .key_up(cmd_ctrl)\
 #     .perform()
+
 #git config --global user.name nome_de_usuario
 # git config --global user.email email@exemplo.br
 
