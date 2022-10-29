@@ -72,5 +72,4 @@ f(a,'//input[contains(@name, "token")]').click()
 py.hotkey('ctrl','v')
 f(a,'//input[contains(@type, "password")]').send_keys(password)
 
-
-t(3000)
+n.quit()
