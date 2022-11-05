@@ -1,6 +1,8 @@
 
 # //span[contains(text(), "Texto")]
 # //span[contains(@id, "ID ")]
+# //span[contains(@id='' and div[1]/div[1]/a)]
+
 
 # cmd_ctrl = Keys.COMMAND if sys.platform == 'darwin' else Keys.CONTROL
 

@@ -1,5 +1,5 @@
 import time
-import pyautogui as py
+from utils import password
 from selenium import webdriver
 from selenium.webdriver.common.by import By
 from selenium.webdriver.chrome.service import Service as ChromeService
@@ -17,59 +17,45 @@ t = time.sleep
 nes = navegador.execute_script
 nsw = navegador.switch_to.window
 
-nes("window.open('about:blank','secondtab');")
+navegador.execute_script("window.open('about:blank','secondtab');");
 
-nsw("secondtab")
+navegador.switch_to.window("secondtab");
 
-ng('https://www.casaevideo.com.br/login?returnUrl=%2Flogin%3FreturnUrl%3D%252Flogin%253FreturnUrl%253D%25252Flogin%25253FreturnUrl%25253D%2525252F')
-t(3)
-f(a ,"//a[contains(text(), 'Não')]").click()
-t(3)
-n.execute_script("window.open('about:blank','thirdtab');")
-nsw("thirdtab")
-ng('https://www.mohmal.com/pt/inbox')
-# f(a,'//a[contains(@id, "at-cv")]').click()
-f(a,'//a[contains(@id, "delete")]').click()
-f(a,'//div[contains(@class, "email")]').click()
+ng('https://www.casaevideo.com.br/login?returnUrl=%2Flogin%3FreturnUrl%3D%252Flogin%253FreturnUrl%253D%25252Flogin%25253FreturnUrl%25253D%2525252F');
+t(3);
+f(a ,"//a[contains(text(), 'Não')]").click();
+t(3);
+n.execute_script("window.open('about:blank','thirdtab');");
+nsw("thirdtab");
+ng('https://www.mohmal.com/pt/inbox');
 
-t(3)
-
-nsw("secondtab")
-f(a,'//input[contains(@name, "email")]').click()
-py.hotkey('ctrl','v')
-py.press('enter')
-t(3)
-nsw("thirdtab")
-n.refresh()
-t(5)
-#if  f(a,'//a[contains(@title, "Close")]')
-# if navegador.find_element(By.CSS_SELECTOR,'#at-cv-lightbox-close'):
-#     f(a,'//a[contains(@title, "Close")]').click()
-# else:
-#     pass
+f(a,'//a[contains(@id, "delete")]').click();
+f(a,'//div[contains(@class, "email")]').click();
+t(1)
+nsw("secondtab");
+t(1)
+f(a,'//input[contains(@name, "email")]').click();
+action.key_down(Keys.CONTROL).send_keys('V').key_up(Keys.CONTROL).send_keys(Keys.RETURN).perform();
+t(4)
+nsw("thirdtab");
+n.refresh();
+t(2);
 
 f(a,'//a[contains(text(), "Seu")]').click()
 t(3)
-# action = ActionChains(n)
-# double = navegador.find_element(a,'//h1[contains(@style, "Margin")]');
-# action.double_click(double).perform()
 
-retornar = {"codigo" : "",};
-page = navegador.find_element(a,'//h1[contains(@style, "Margin")]');
-codigo = page.find_element(a,'//h1[contains(@style, "Margin")]')
-for i in range(len(codigo)):
-    retornar["codigo"] = retornar["codigo"] + codigo[i].text + " ";
-
-pegoucode = [];
-retornar = [];
-for i in range(len(pegoucode)):
-    retornar.append(pegoucode[i]);
-
-#f(a,'//h1[contains(@style, "Margin")]').click()
-py.hotkey('ctrl','c')
+double = f(a,"/html/body/div/table/tbody/tr/td/table[2]/tbody/tr/td/table/tbody/tr[1]/td/table/tbody/tr/td/table/tbody/tr[2]/td/h1");
+action = ActionChains(n)
+action.double_click(double).perform()
+action.key_down(Keys.CONTROL).send_keys('C').key_up(Keys.CONTROL).perform()
 nsw("secondtab")
-f(a,'//input[contains(@name, "token")]').click()
-py.hotkey('ctrl','v')
+f(a,'//input[contains(@name, "token")]').click();
+action.key_down(Keys.CONTROL).send_keys('V').key_up(Keys.CONTROL).perform()
+
 f(a,'//input[contains(@type, "password")]').send_keys(password)
+f(a,'//input[contains(@type, "password")]').text()
+f(a,'//input[contains(@placeholder, "Confirmar")]').click();
+action.key_down(Keys.CONTROL).send_keys('V').key_up(Keys.CONTROL).perform();
+
 
 n.quit()

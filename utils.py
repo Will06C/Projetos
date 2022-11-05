@@ -1,8 +1,4 @@
-import re
-import names
-import re
-import random as r
-
+import re, names, random as r
 
 def name():
     name = [("Seu nome Aleatório: " + names.get_full_name(gender = "male" "female"))]
